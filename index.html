@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grep & Piping Terminal Tutor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Terminal Command Practice</h1>
+      <p class="subtitle">Master grep, piping, and Unix commands</p>
+    </div>
+    
+    <div class="difficulty-selector">
+      <h3>Select Difficulty Level:</h3>
+      <div class="difficulty-buttons">
+        <button onclick="setDifficulty('easy')" class="difficulty-btn difficulty-easy" id="btn-easy">
+          <span class="difficulty-icon">🟢</span>
+          Easy
+        </button>
+        <button onclick="setDifficulty('intermediate')" class="difficulty-btn difficulty-intermediate" id="btn-intermediate">
+          <span class="difficulty-icon">🟡</span>
+          Intermediate
+        </button>
+        <button onclick="setDifficulty('pro')" class="difficulty-btn difficulty-pro" id="btn-pro">
+          <span class="difficulty-icon">🔴</span>
+          Pro
+        </button>
+        <button onclick="setDifficulty('all')" class="difficulty-btn difficulty-all active" id="btn-all">
+          <span class="difficulty-icon">🌈</span>
+          All Levels
+        </button>
+      </div>
+    </div>
+    
+    <div class="terminal-container">
+      <div class="terminal-header">
+        <div class="terminal-buttons">
+          <span class="terminal-button close"></span>
+          <span class="terminal-button minimize"></span>
+          <span class="terminal-button maximize"></span>
+        </div>
+        <div class="terminal-title">bash</div>
+      </div>
+      
+      <div class="terminal-body">
+        <div class="terminal-output" id="terminalOutput">
+          <div class="output-line">
+            <span class="prompt">user@terminal:~$</span>
+            <span class="command">Welcome to the Terminal Practice!</span>
+          </div>
+        </div>
+        
+        <div class="question-section">
+          <div class="question-header">
+            <span class="question-icon">❓</span>
+            <span class="question-label">Current Challenge:</span>
+            <span class="difficulty-badge" id="currentDifficulty"></span>
+          </div>
+          <pre id="questionDisplay" class="question-text">Loading question...</pre>
+          <p id="hintDisplay" class="hint-text"></p>
+        </div>
+        
+        <div class="input-section">
+          <div class="command-line">
+            <span class="prompt">user@terminal:~$</span>
+            <textarea id="commandInput" placeholder="Enter your command here..." autocomplete="off"></textarea>
+          </div>
+          
+          <div class="action-buttons">
+            <button onclick="checkCommand()" class="btn btn-primary">
+              <span class="btn-icon">▶️</span>
+              Execute
+            </button>
+            <button onclick="getNextQuestion()" class="btn btn-secondary">
+              <span class="btn-icon">🔄</span>
+              New Question
+            </button>
+            <button onclick="showAnswer()" class="btn btn-hint">
+              <span class="btn-icon">💡</span>
+              Show Answer
+            </button>
+            <button onclick="clearTerminal()" class="btn btn-clear">
+              <span class="btn-icon">🗑️</span>
+              Clear
+            </button>
+          </div>
+        </div>
+        
+        <div id="feedback" class="feedback-section"></div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>by James Oralde</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,620 @@
+[
+  {
+    "question": "Find all lines containing 'error' in the system log file files/system.log.",
+    "answer": "grep error files/system.log",
+    "hint": "Use grep to search for error messages in system logs.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Count how many times '404' appears in the web server access log files/access.log.",
+    "answer": "grep -o 404 files/access.log | wc -l",
+    "hint": "Use grep -o to find each occurrence, then count with wc -l.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Extract the first column (IP addresses) from the CSV file files/data.csv.",
+    "answer": "cut -d',' -f1 data.csv",
+    "hint": "Use cut with comma delimiter to get the first field.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Find all lines that contain 'WARNING' in the application log app.log.",
+    "answer": "grep WARNING app.log",
+    "hint": "Search for WARNING messages (case-sensitive).",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Display the first 10 lines of the large log file large_file.log.",
+    "answer": "head -n 10 large_file.log",
+    "hint": "Use head with -n to limit output to 10 lines.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Show the last 5 lines of the log file recent.log to see recent activity.",
+    "answer": "tail -n 5 recent.log",
+    "hint": "Use tail to see the most recent entries.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Search for 'password' in all .txt files in the current directory.",
+    "answer": "grep password *.txt",
+    "hint": "Use wildcard to search multiple files at once.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Extract usernames from the system password file /etc/passwd.",
+    "answer": "cut -d':' -f1 /etc/passwd",
+    "hint": "Use cut with colon delimiter to get usernames.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Find all lines containing 'failed' in the system log file system.log (case-insensitive search).",
+    "answer": "grep -i failed system.log",
+    "hint": "Use -i flag for case-insensitive search.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Count the number of unique IP addresses in the access log file access.log.",
+    "answer": "cut -d' ' -f1 access.log | sort | uniq | wc -l",
+    "hint": "Extract IPs, sort, remove duplicates, then count.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Find lines containing 'error' or 'ERROR' in a log file.",
+    "answer": "grep -i error logfile.log",
+    "hint": "Use case-insensitive search to catch both variations.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Extract the second field from a space-separated file.",
+    "answer": "cut -d' ' -f2 data.txt",
+    "hint": "Use cut with space delimiter to get second field.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Show only lines that contain 'success' in a log file.",
+    "answer": "grep success application.log",
+    "hint": "Simple grep to filter for success messages.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Display the first 20 lines of a configuration file.",
+    "answer": "head -n 20 config.conf",
+    "hint": "Use head to see the beginning of a file.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Find all lines that start with '#' (comments) in a script.",
+    "answer": "grep '^#' script.sh",
+    "hint": "Use ^ to match lines that start with #.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Extract email addresses from a text file (basic pattern).",
+    "answer": "grep -o '[A-Za-z0-9._%+-]\\+@[A-Za-z0-9.-]\\+\\.[A-Za-z]\\{2,\\}' emails.txt",
+    "hint": "Use grep with regex pattern to find email addresses.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Count how many lines contain 'timeout' in a log file.",
+    "answer": "grep -c timeout connection.log",
+    "hint": "Use -c flag to count matching lines directly.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Show the last 15 lines of a growing log file.",
+    "answer": "tail -n 15 /var/log/messages",
+    "hint": "Use tail to monitor recent log entries.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Find lines that end with '.log' in a file listing.",
+    "answer": "grep '\\.log$' file_list.txt",
+    "hint": "Use $ to match lines ending with .log.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Extract the third column from a tab-separated file.",
+    "answer": "cut -f3 data.tsv",
+    "hint": "Use cut with tab delimiter (default) to get third field.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Search for 'critical' in all log files in a directory.",
+    "answer": "grep critical *.log",
+    "hint": "Use wildcard to search multiple log files.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Display lines 50-60 of a large text file.",
+    "answer": "sed -n '50,60p' large_file.txt",
+    "hint": "Use sed to extract specific line ranges.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Find all lines that contain numbers in a text file.",
+    "answer": "grep '[0-9]' data.txt",
+    "hint": "Use regex pattern to find lines with digits.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Extract the last field from a pipe-separated file.",
+    "answer": "cut -d'|' -f-1 data.txt",
+    "hint": "Use cut with pipe delimiter, -f-1 gets the last field.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Show only non-empty lines in a file.",
+    "answer": "grep -v '^$' file.txt",
+    "hint": "Use -v to invert match and exclude empty lines.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Find lines containing 'error' but not 'warning'.",
+    "answer": "grep error log.txt | grep -v warning",
+    "hint": "Pipe grep results through another grep with -v.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Count total lines, words, and characters in a file.",
+    "answer": "wc file.txt",
+    "hint": "Use wc to get line, word, and character counts.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Extract the domain part from email addresses.",
+    "answer": "cut -d'@' -f2 emails.txt",
+    "hint": "Use cut with @ delimiter to get domain part.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Find all lines that contain exactly 3 digits.",
+    "answer": "grep '^[0-9]\\{3\\}$' numbers.txt",
+    "hint": "Use regex to match exactly 3 digits from start to end.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Show the first 5 lines of each file in a directory.",
+    "answer": "head -n 5 *.txt",
+    "hint": "Use head with wildcard to process multiple files.",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Find the most common word in a text file.",
+    "answer": "tr -s ' ' '\\n' < text.txt | sort | uniq -c | sort -nr | head -1",
+    "hint": "Convert spaces to newlines, sort, count, then sort by frequency.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract the 5th field from a CSV and sort it uniquely.",
+    "answer": "cut -d',' -f5 data.csv | sort | uniq",
+    "hint": "Extract field, sort alphabetically, remove duplicates.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find all lines containing 'error' and show 2 lines before and after.",
+    "answer": "grep -A 2 -B 2 error log.txt",
+    "hint": "Use -A for lines after, -B for lines before the match.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract IP addresses from a log file and count unique ones.",
+    "answer": "grep -oE '([0-9]{1,3}\\.){3}[0-9]{1,3}' access.log | sort | uniq | wc -l",
+    "hint": "Use regex to find IP patterns, then count unique occurrences.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find the top 10 most frequent error messages in a log.",
+    "answer": "grep error log.txt | sort | uniq -c | sort -nr | head -10",
+    "hint": "Find errors, sort, count duplicates, sort by count, take top 10.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract timestamps from log entries and sort them.",
+    "answer": "grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}' log.txt | sort",
+    "hint": "Use regex to extract timestamp format, then sort chronologically.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find lines that contain 'error' but exclude lines with 'debug'.",
+    "answer": "grep error log.txt | grep -v debug",
+    "hint": "First find errors, then exclude debug lines.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract the 3rd and 5th fields from a space-separated file.",
+    "answer": "cut -d' ' -f3,5 data.txt",
+    "hint": "Use cut with multiple field numbers separated by comma.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find all lines containing 'error' or 'warning' or 'critical'.",
+    "answer": "grep -E 'error|warning|critical' log.txt",
+    "hint": "Use extended regex with | for OR conditions.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Count how many times each unique word appears in a file.",
+    "answer": "tr -s ' ' '\\n' < text.txt | sort | uniq -c | sort -nr",
+    "hint": "Convert spaces to newlines, sort, count, then sort by frequency.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract email addresses and sort them alphabetically.",
+    "answer": "grep -oE '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}' emails.txt | sort",
+    "hint": "Use regex to find emails, then sort them.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find the longest line in a text file.",
+    "answer": "awk '{ print length, $0 }' file.txt | sort -nr | head -1",
+    "hint": "Use awk to measure line length, sort numerically, take first.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract the 2nd and 4th fields, swap them, and sort.",
+    "answer": "cut -d',' -f2,4 data.csv | awk -F',' '{print $2,$1}' | sort",
+    "hint": "Extract fields, use awk to swap positions, then sort.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find lines containing 'error' and show line numbers.",
+    "answer": "grep -n error log.txt",
+    "hint": "Use -n flag to show line numbers with matches.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract unique domain names from email addresses.",
+    "answer": "cut -d'@' -f2 emails.txt | sort | uniq",
+    "hint": "Extract domain part, sort, remove duplicates.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find all lines that start with a number and end with 'error'.",
+    "answer": "grep '^[0-9].*error$' log.txt",
+    "hint": "Use ^ for start, .* for anything, $ for end.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract the 3rd field and count unique values.",
+    "answer": "cut -d',' -f3 data.csv | sort | uniq | wc -l",
+    "hint": "Extract field, sort, remove duplicates, count lines.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find lines containing 'error' but not 'timeout' or 'retry'.",
+    "answer": "grep error log.txt | grep -v timeout | grep -v retry",
+    "hint": "Chain multiple grep commands with -v to exclude patterns.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract the last 3 characters from each line in a file.",
+    "answer": "sed 's/.*\\(...\\)$/\\1/' file.txt",
+    "hint": "Use sed with regex to capture last 3 characters.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find the most common HTTP status code in an access log.",
+    "answer": "awk '{print $9}' access.log | sort | uniq -c | sort -nr | head -1",
+    "hint": "Extract status code field, count occurrences, sort by frequency.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract lines 10-20 and show only lines containing 'error'.",
+    "answer": "sed -n '10,20p' log.txt | grep error",
+    "hint": "Use sed to extract line range, then grep for errors.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find all lines with exactly 5 words.",
+    "answer": "awk 'NF==5' file.txt",
+    "hint": "Use awk to check if number of fields equals 5.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract the 2nd field and find the maximum value.",
+    "answer": "cut -d',' -f2 data.csv | sort -n | tail -1",
+    "hint": "Extract field, sort numerically, take the last (highest) value.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find lines containing 'error' and show 3 lines of context.",
+    "answer": "grep -C 3 error log.txt",
+    "hint": "Use -C for context (lines before and after the match).",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract unique file extensions from a file listing.",
+    "answer": "ls *.txt | sed 's/.*\\.//' | sort | uniq",
+    "hint": "List files, extract extension with sed, sort, remove duplicates.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find the average line length in a text file.",
+    "answer": "awk '{sum += length} END {print sum/NR}' file.txt",
+    "hint": "Use awk to sum line lengths and divide by number of lines.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract the 4th field and find the minimum value.",
+    "answer": "cut -d',' -f4 data.csv | sort -n | head -1",
+    "hint": "Extract field, sort numerically, take the first (lowest) value.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find all lines that contain 'error' and have a timestamp.",
+    "answer": "grep error log.txt | grep -E '[0-9]{4}-[0-9]{2}-[0-9]{2}'",
+    "hint": "Find errors, then filter for lines with date pattern.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract the 1st and 3rd fields, join them with a dash.",
+    "answer": "cut -d',' -f1,3 data.csv | sed 's/,/-/'",
+    "hint": "Extract fields, use sed to replace comma with dash.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find the top 5 most active IP addresses in an access log.",
+    "answer": "awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -5",
+    "hint": "Extract IP field, count occurrences, sort by frequency, take top 5.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract lines containing 'error' and show only the error message part.",
+    "answer": "grep error log.txt | sed 's/.*error: //'",
+    "hint": "Find errors, use sed to remove everything before 'error: '.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find all lines that contain exactly 3 commas.",
+    "answer": "awk -F',' 'NF==4' file.txt",
+    "hint": "Use awk with comma delimiter, check if number of fields is 4 (3 commas).",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract the 2nd field and calculate the sum of all values.",
+    "answer": "cut -d',' -f2 data.csv | awk '{sum += $1} END {print sum}'",
+    "hint": "Extract field, use awk to sum all values.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find lines containing 'error' and extract the timestamp and error message.",
+    "answer": "grep error log.txt | awk '{print $1, $2, $NF}'",
+    "hint": "Find errors, use awk to print first two fields and last field.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract unique values from the 3rd field and count them.",
+    "answer": "cut -d',' -f3 data.csv | sort | uniq -c",
+    "hint": "Extract field, sort, count unique occurrences.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find the most common word that appears after 'error:' in log entries.",
+    "answer": "grep 'error:' log.txt | awk '{print $NF}' | sort | uniq -c | sort -nr | head -1",
+    "hint": "Find error lines, extract last field, count occurrences, sort by frequency.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract the 2nd and 4th fields, calculate their difference, and sort.",
+    "answer": "cut -d',' -f2,4 data.csv | awk -F',' '{print $2-$1}' | sort -n",
+    "hint": "Extract fields, use awk to calculate difference, sort numerically.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find lines containing 'error' and show the line number and the error message.",
+    "answer": "grep -n error log.txt | sed 's/:error:/: /'",
+    "hint": "Find errors with line numbers, use sed to format output.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Extract unique values from the 1st field and show their count in descending order.",
+    "answer": "cut -d',' -f1 data.csv | sort | uniq -c | sort -nr",
+    "hint": "Extract field, sort, count unique occurrences, sort by count descending.",
+    "difficulty": "intermediate"
+  },
+  {
+    "question": "Find all lines that contain 'error' and extract the timestamp, error level, and message in a formatted way.",
+    "answer": "grep error log.txt | awk '{printf \"[%s] %s: %s\\n\", $1, $2, substr($0, index($0, $3))}'",
+    "hint": "Find errors, use awk to format timestamp, level, and full message.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract the 2nd and 4th fields from a CSV, calculate their ratio, and find the maximum ratio.",
+    "answer": "cut -d',' -f2,4 data.csv | awk -F',' '$2!=0 {print $1/$2}' | sort -n | tail -1",
+    "hint": "Extract fields, calculate ratio (avoid division by zero), sort, take maximum.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find all lines containing 'error' or 'warning' or 'critical', show line numbers, and extract the severity level.",
+    "answer": "grep -nE 'error|warning|critical' log.txt | awk -F':' '{print $1, $NF}'",
+    "hint": "Find all severity levels with line numbers, extract line number and last field.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract unique values from the 3rd field, count them, and show only those that appear more than 5 times.",
+    "answer": "cut -d',' -f3 data.csv | sort | uniq -c | awk '$1 > 5'",
+    "hint": "Extract field, count occurrences, filter for counts greater than 5.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find the average response time from an access log by extracting the response time field and calculating the mean.",
+    "answer": "awk '{sum += $10} END {print sum/NR}' access.log",
+    "hint": "Use awk to sum response times and divide by number of lines.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract the 1st and 3rd fields, calculate their product, and find the top 3 highest products.",
+    "answer": "cut -d',' -f1,3 data.csv | awk -F',' '{print $1*$2}' | sort -nr | head -3",
+    "hint": "Extract fields, calculate product, sort numerically in reverse, take top 3.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find all lines containing 'error' and extract the timestamp, error code, and error message in a structured format.",
+    "answer": "grep error log.txt | awk '{printf \"Time: %s, Code: %s, Message: %s\\n\", $1, $2, substr($0, index($0, $3))}'",
+    "hint": "Find errors, use awk to format structured output with timestamp, code, and message.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract unique values from the 2nd field, calculate the sum of corresponding values from the 4th field for each unique value.",
+    "answer": "awk -F',' '{sum[$2] += $4} END {for (i in sum) print i, sum[i]}' data.csv",
+    "hint": "Use awk associative array to group by 2nd field and sum 4th field values.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find the most common HTTP status codes and their percentages from an access log.",
+    "answer": "awk '{print $9}' access.log | sort | uniq -c | awk '{print $2, $1, ($1/NR)*100 \"%\"}'",
+    "hint": "Extract status codes, count, calculate percentage of total requests.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract the 1st, 3rd, and 5th fields, calculate the weighted average (1st*0.5 + 3rd*0.3 + 5th*0.2).",
+    "answer": "cut -d',' -f1,3,5 data.csv | awk -F',' '{print $1*0.5 + $2*0.3 + $3*0.2}'",
+    "hint": "Extract three fields, use awk to calculate weighted average with specified weights.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find all lines containing 'error' and extract the hour of the day, error type, and count errors per hour.",
+    "answer": "grep error log.txt | awk '{print substr($2,1,2), $NF}' | sort | uniq -c",
+    "hint": "Find errors, extract hour from timestamp and error type, count by hour.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract unique values from the 2nd field, find the minimum and maximum values from the 4th field for each unique value.",
+    "answer": "awk -F',' '{if (!min[$2] || $4 < min[$2]) min[$2] = $4; if (!max[$2] || $4 > max[$2]) max[$2] = $4} END {for (i in min) print i, min[i], max[i]}' data.csv",
+    "hint": "Use awk associative arrays to track min/max values for each unique 2nd field value.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find the top 10 most frequent error messages and show their occurrence count and percentage.",
+    "answer": "grep error log.txt | awk '{print $NF}' | sort | uniq -c | sort -nr | head -10 | awk '{print $2, $1, ($1/NR)*100 \"%\"}'",
+    "hint": "Find errors, extract messages, count, sort by frequency, calculate percentages.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract unique values from the 1st field, calculate the standard deviation of corresponding values from the 3rd field.",
+    "answer": "awk -F',' '{sum[$1] += $3; sum_sq[$1] += $3*$3; count[$1]++} END {for (i in sum) {avg = sum[i]/count[i]; var = (sum_sq[i]/count[i]) - avg*avg; print i, sqrt(var)}}' data.csv",
+    "hint": "Calculate mean and variance, then standard deviation for each unique value.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find the most common error message patterns (first 3 words) in error messages and their frequencies.",
+    "answer": "grep error log.txt | awk '{print $NF}' | awk '{print $1, $2, $3}' | sort | uniq -c | sort -nr | head -10",
+    "hint": "Find errors, extract first 3 words of message, count patterns, sort by frequency.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract the 2nd and 4th fields, calculate their moving average (3-point average) and show the results.",
+    "answer": "cut -d',' -f2,4 data.csv | awk -F',' '{print $1, $2}' | awk 'NR>2 {print (prev2+prev1+$1)/3} {prev2=prev1; prev1=$1}'",
+    "hint": "Extract fields, use awk to maintain previous values and calculate 3-point moving average.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find all lines containing 'error' and extract the month, error type, and calculate error rate per month.",
+    "answer": "grep error log.txt | awk '{print substr($1,6,2), $NF}' | sort | uniq -c | awk '{print $2, $3, $1, ($1/NR)*100 \"%\"}'",
+    "hint": "Find errors, extract month and type, count by month, calculate percentage.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract unique values from the 3rd field, find the median value from the 5th field for each unique value.",
+    "answer": "awk -F',' '{arr[$3][++count[$3]] = $5} END {for (i in arr) {asort(arr[i]); print i, arr[i][int(count[i]/2)+1]}}' data.csv",
+    "hint": "Use awk to group by 3rd field, store 5th field values, calculate median for each group.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find the top 5 most active IP addresses and their request patterns (GET/POST ratio).",
+    "answer": "awk '{print $1, $7}' access.log | awk '$2 ~ /GET|POST/ {print $1, $2}' | awk '{get[$1]++; post[$1]++; total[$1]++} END {for (i in total) print i, get[i], post[i], (get[i]/total[i]*100) \"% GET\"}' | sort -k4 -nr | head -5",
+    "hint": "Extract IP and method, count GET/POST per IP, calculate ratio, sort by GET percentage.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract the 1st, 3rd, and 5th fields, calculate the geometric mean of the three values.",
+    "answer": "cut -d',' -f1,3,5 data.csv | awk -F',' '{print ($1*$2*$3)^(1/3)}'",
+    "hint": "Extract three fields, calculate geometric mean using cube root of product.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find all lines containing 'error' and extract the time period (morning/afternoon/evening/night) and error frequency by period.",
+    "answer": "grep error log.txt | awk '{hour=substr($2,1,2); if(hour<12) period=\"morning\"; else if(hour<17) period=\"afternoon\"; else if(hour<21) period=\"evening\"; else period=\"night\"; print period}' | sort | uniq -c",
+    "hint": "Find errors, extract hour, categorize time periods, count by period.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract unique values from the 2nd field, calculate the interquartile range (Q3-Q1) of corresponding values from the 4th field.",
+    "answer": "awk -F',' '{arr[$2][++count[$2]] = $4} END {for (i in arr) {asort(arr[i]); n=count[i]; q1=arr[i][int(n*0.25)+1]; q3=arr[i][int(n*0.75)+1]; print i, q3-q1}}' data.csv",
+    "hint": "Group by 2nd field, sort values, calculate Q1 (25th percentile) and Q3 (75th percentile), find difference.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find the most common error message patterns and their seasonal distribution (by month).",
+    "answer": "grep error log.txt | awk '{print substr($1,6,2), $NF}' | awk '{pattern[$2]++; month[$2][$1]++} END {for (p in pattern) {printf \"%s (%d total): \", p, pattern[p]; for (m in month[p]) printf \"%s:%d \", m, month[p][m]; print \"\"}}'",
+    "hint": "Find errors, extract month and message, group by message pattern, show distribution by month.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract the 2nd and 4th fields, calculate their linear regression slope and intercept.",
+    "answer": "cut -d',' -f2,4 data.csv | awk -F',' '{sum_x+=$1; sum_y+=$2; sum_xy+=$1*$2; sum_x2+=$1*$1; n++} END {slope=(n*sum_xy-sum_x*sum_y)/(n*sum_x2-sum_x*sum_x); intercept=(sum_y-slope*sum_x)/n; print \"slope:\", slope, \"intercept:\", intercept}'",
+    "hint": "Calculate linear regression parameters using least squares method.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find all lines containing 'error' and extract the day of week, error severity level, and calculate error severity distribution by day.",
+    "answer": "grep error log.txt | awk '{day=strftime(\"%A\", mktime($1)); if($NF ~ /CRITICAL/) sev=\"CRITICAL\"; else if($NF ~ /ERROR/) sev=\"ERROR\"; else if($NF ~ /WARNING/) sev=\"WARNING\"; else sev=\"INFO\"; print day, sev}' | sort | uniq -c",
+    "hint": "Find errors, extract day and categorize severity, count by day and severity.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract unique values from the 1st field, calculate the coefficient of variation (std_dev/mean) of corresponding values from the 3rd field.",
+    "answer": "awk -F',' '{sum[$1] += $3; sum_sq[$1] += $3*$3; count[$1]++} END {for (i in sum) {avg = sum[i]/count[i]; var = (sum_sq[i]/count[i]) - avg*avg; cv = sqrt(var)/avg; print i, cv}}' data.csv",
+    "hint": "Calculate mean and standard deviation, then coefficient of variation (CV = std_dev/mean).",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find the most common error message patterns and their hourly distribution (peak error hours).",
+    "answer": "grep error log.txt | awk '{print substr($2,1,2), $NF}' | awk '{pattern[$2]++; hour[$2][$1]++} END {for (p in pattern) {printf \"%s: \", p; for (h in hour[p]) if(hour[p][h] > 1) printf \"%s:%d \", h, hour[p][h]; print \"\"}}'",
+    "hint": "Find errors, extract hour and message pattern, group by pattern, show hourly distribution for frequent patterns.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract the 2nd and 4th fields, calculate their Pearson correlation coefficient and significance test (simplified).",
+    "answer": "cut -d',' -f2,4 data.csv | awk -F',' '{sum_x+=$1; sum_y+=$2; sum_xy+=$1*$2; sum_x2+=$1*$1; sum_y2+=$2*$2; n++} END {r=(n*sum_xy-sum_x*sum_y)/sqrt((n*sum_x2-sum_x*sum_x)*(n*sum_y2-sum_y*sum_y)); t=r*sqrt((n-2)/(1-r*r)); print \"r:\", r, \"t:\", t}'",
+    "hint": "Calculate correlation coefficient and t-statistic for significance testing.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find all lines containing 'error' and extract the week number, error category, and calculate weekly error trends.",
+    "answer": "grep error log.txt | awk '{week=strftime(\"%U\", mktime($1)); print week, $NF}' | sort | uniq -c | awk '{week_errors[$2] += $1} END {for (w in week_errors) print \"Week\", w, week_errors[w]}'",
+    "hint": "Find errors, extract week number and error type, count by week, show weekly trends.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract unique values from the 3rd field, calculate the skewness of corresponding values from the 5th field (measure of distribution asymmetry).",
+    "answer": "awk -F',' '{sum[$3] += $5; sum_sq[$3] += $5*$5; sum_cub[$3] += $5*$5*$5; count[$3]++} END {for (i in sum) {avg = sum[i]/count[i]; var = (sum_sq[i]/count[i]) - avg*avg; skew = ((sum_cub[i]/count[i]) - 3*avg*var - avg*avg*avg)/(var^1.5); print i, skew}}' data.csv",
+    "hint": "Calculate mean, variance, and third moment, then skewness = (third_moment - 3*mean*variance - mean^3)/variance^1.5.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find the most common error message patterns and their response time impact (average response time when each error occurs).",
+    "answer": "grep error log.txt | awk '{print $NF, $10}' | awk '$2 ~ /^[0-9]+$/ {sum[$1] += $2; count[$1]++} END {for (i in sum) print i, sum[i]/count[i]}'",
+    "hint": "Find errors, extract message and response time, calculate average response time per error pattern.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract the 1st, 3rd, and 5th fields, calculate the harmonic mean of the three values.",
+    "answer": "cut -d',' -f1,3,5 data.csv | awk -F',' '{print 3/(1/$1 + 1/$2 + 1/$3)}'",
+    "hint": "Extract three fields, calculate harmonic mean = n/(1/x1 + 1/x2 + 1/x3).",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Find all lines containing 'error' and extract the season (Q1/Q2/Q3/Q4), error severity, and calculate seasonal error patterns.",
+    "answer": "grep error log.txt | awk '{month=substr($1,6,2); if(month<4) season=\"Q1\"; else if(month<7) season=\"Q2\"; else if(month<10) season=\"Q3\"; else season=\"Q4\"; print season, $NF}' | sort | uniq -c",
+    "hint": "Find errors, categorize by quarter, count by season and error type.",
+    "difficulty": "pro"
+  },
+  {
+    "question": "Extract unique values from the 2nd field, calculate the kurtosis of corresponding values from the 4th field (measure of distribution peakedness).",
+    "answer": "awk -F',' '{sum[$2] += $4; sum_sq[$2] += $4*$4; sum_4[$2] += $4*$4*$4*$4; count[$2]++} END {for (i in sum) {avg = sum[i]/count[i]; var = (sum_sq[i]/count[i]) - avg*avg; kurt = ((sum_4[i]/count[i]) - 4*avg*avg*avg*avg + 6*avg*avg*var - 3*avg*avg*avg*avg)/(var*var); print i, kurt}}' data.csv",
+    "hint": "Calculate mean, variance, and fourth moment, then kurtosis = (fourth_moment - 4*mean^4 + 6*mean^2*variance - 3*mean^4)/variance^2.",
+    "difficulty": "pro"
+  }
+]

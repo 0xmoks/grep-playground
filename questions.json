@@ -60,49 +60,49 @@
     "difficulty": "easy"
   },
   {
-    "question": "Find lines containing 'error' or 'ERROR' in a log file.",
+    "question": "Find lines containing 'error' or 'ERROR' in the log file logfile.log.",
     "answer": "grep -i error logfile.log",
     "hint": "Use case-insensitive search to catch both variations.",
     "difficulty": "easy"
   },
   {
-    "question": "Extract the second field from a space-separated file.",
+    "question": "Extract the second field from the space-separated file data.txt.",
     "answer": "cut -d' ' -f2 data.txt",
     "hint": "Use cut with space delimiter to get second field.",
     "difficulty": "easy"
   },
   {
-    "question": "Show only lines that contain 'success' in a log file.",
+    "question": "Show only lines that contain 'success' in the log file application.log.",
     "answer": "grep success application.log",
     "hint": "Simple grep to filter for success messages.",
     "difficulty": "easy"
   },
   {
-    "question": "Display the first 20 lines of a configuration file.",
+    "question": "Display the first 20 lines of the configuration file config.conf.",
     "answer": "head -n 20 config.conf",
     "hint": "Use head to see the beginning of a file.",
     "difficulty": "easy"
   },
   {
-    "question": "Find all lines that start with '#' (comments) in a script.",
+    "question": "Find all lines that start with '#' (comments) in the script file script.sh.",
     "answer": "grep '^#' script.sh",
     "hint": "Use ^ to match lines that start with #.",
     "difficulty": "easy"
   },
   {
-    "question": "Extract email addresses from a text file (basic pattern).",
+    "question": "Extract email addresses from the text file emails.txt (basic pattern).",
     "answer": "grep -o '[A-Za-z0-9._%+-]\\+@[A-Za-z0-9.-]\\+\\.[A-Za-z]\\{2,\\}' emails.txt",
     "hint": "Use grep with regex pattern to find email addresses.",
     "difficulty": "easy"
   },
   {
-    "question": "Count how many lines contain 'timeout' in a log file.",
+    "question": "Count how many lines contain 'timeout' in the log file connection.log.",
     "answer": "grep -c timeout connection.log",
     "hint": "Use -c flag to count matching lines directly.",
     "difficulty": "easy"
   },
   {
-    "question": "Show the last 15 lines of a growing log file.",
+    "question": "Show the last 15 lines of the growing log file /var/log/messages.",
     "answer": "tail -n 15 /var/log/messages",
     "hint": "Use tail to monitor recent log entries.",
     "difficulty": "easy"
@@ -132,7 +132,7 @@
     "difficulty": "easy"
   },
   {
-    "question": "Find all lines that contain numbers in a text file.",
+    "question": "Find all lines that contain numbers in the text file data.txt.",
     "answer": "grep '[0-9]' data.txt",
     "hint": "Use regex pattern to find lines with digits.",
     "difficulty": "easy"
@@ -144,7 +144,7 @@
     "difficulty": "easy"
   },
   {
-    "question": "Show only non-empty lines in a file.",
+    "question": "Show only non-empty lines in the file file.txt.",
     "answer": "grep -v '^$' file.txt",
     "hint": "Use -v to invert match and exclude empty lines.",
     "difficulty": "easy"
@@ -156,7 +156,7 @@
     "difficulty": "easy"
   },
   {
-    "question": "Count total lines, words, and characters in a file.",
+    "question": "Count total lines, words, and characters in the file file.txt.",
     "answer": "wc file.txt",
     "hint": "Use wc to get line, word, and character counts.",
     "difficulty": "easy"
@@ -180,7 +180,7 @@
     "difficulty": "easy"
   },
   {
-    "question": "Find the most common word in a text file.",
+    "question": "Find the most common word in the text file text.txt.",
     "answer": "tr -s ' ' '\\n' < text.txt | sort | uniq -c | sort -nr | head -1",
     "hint": "Convert spaces to newlines, sort, count, then sort by frequency.",
     "difficulty": "intermediate"
@@ -204,7 +204,7 @@
     "difficulty": "intermediate"
   },
   {
-    "question": "Find the top 10 most frequent error messages in a log.",
+    "question": "Find the top 10 most frequent error messages in the log file log.txt.",
     "answer": "grep error log.txt | sort | uniq -c | sort -nr | head -10",
     "hint": "Find errors, sort, count duplicates, sort by count, take top 10.",
     "difficulty": "intermediate"
@@ -234,7 +234,7 @@
     "difficulty": "intermediate"
   },
   {
-    "question": "Count how many times each unique word appears in a file.",
+    "question": "Count how many times each unique word appears in the file text.txt.",
     "answer": "tr -s ' ' '\\n' < text.txt | sort | uniq -c | sort -nr",
     "hint": "Convert spaces to newlines, sort, count, then sort by frequency.",
     "difficulty": "intermediate"
@@ -246,7 +246,7 @@
     "difficulty": "intermediate"
   },
   {
-    "question": "Find the longest line in a text file.",
+    "question": "Find the longest line in the text file file.txt.",
     "answer": "awk '{ print length, $0 }' file.txt | sort -nr | head -1",
     "hint": "Use awk to measure line length, sort numerically, take first.",
     "difficulty": "intermediate"
@@ -288,13 +288,13 @@
     "difficulty": "intermediate"
   },
   {
-    "question": "Extract the last 3 characters from each line in a file.",
+    "question": "Extract the last 3 characters from each line in the file file.txt.",
     "answer": "sed 's/.*\\(...\\)$/\\1/' file.txt",
     "hint": "Use sed with regex to capture last 3 characters.",
     "difficulty": "intermediate"
   },
   {
-    "question": "Find the most common HTTP status code in an access log.",
+    "question": "Find the most common HTTP status code in the access log file access.log.",
     "answer": "awk '{print $9}' access.log | sort | uniq -c | sort -nr | head -1",
     "hint": "Extract status code field, count occurrences, sort by frequency.",
     "difficulty": "intermediate"
@@ -330,7 +330,7 @@
     "difficulty": "intermediate"
   },
   {
-    "question": "Find the average line length in a text file.",
+    "question": "Find the average line length in the text file file.txt.",
     "answer": "awk '{sum += length} END {print sum/NR}' file.txt",
     "hint": "Use awk to sum line lengths and divide by number of lines.",
     "difficulty": "intermediate"
@@ -354,7 +354,7 @@
     "difficulty": "intermediate"
   },
   {
-    "question": "Find the top 5 most active IP addresses in an access log.",
+    "question": "Find the top 5 most active IP addresses in the access log file access.log.",
     "answer": "awk '{print $1}' access.log | sort | uniq -c | sort -nr | head -5",
     "hint": "Extract IP field, count occurrences, sort by frequency, take top 5.",
     "difficulty": "intermediate"

@@ -1,4 +1,4 @@
-# Terminal Command Practice
+# Grep Playground
 
 A modern, interactive web application for practicing Unix/Linux terminal commands including grep, awk, cut, sed, sort, uniq, and piping.
 
@@ -42,7 +42,7 @@ A modern, interactive web application for practicing Unix/Linux terminal command
 ## 📁 Project Structure
 
 ```
-grep-terminal-tutor/
+grep-playground/
 ├── index.html          # Main HTML file
 ├── style.css           # Styling and animations
 ├── script.js           # JavaScript functionality
